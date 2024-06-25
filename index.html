@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="swap-button" onclick="window.location.href='https://subwayswap.com'">
-        Swap
-    </button>
+    <button class="button swap-button">Swap</button>
+    <div class="more-button">
+        <button class="button">More</button>
+        <div class="dropdown">
+            <a href="https://uniswap.org">About Us</a>
+            <a href="https://uniswap.org">Partner with Us</a>
+        </div>
+    </div>
 
     <script src="https://widget.crowdswap.org/loadAssets.js"></script>
     <crowdswap-swap-widget
-        id="crowdswapWidget"
-        config='{
-            "fromTokenAddress":"0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
-            "fromChainId":1,
-            "toTokenAddress":"0xba2ae424d960c26247dd6c32edc70b295c744c43",
-            "toChainId":56,
-            "theme":"dark",
-            "affiliateId":"https://app.crowdswap.org/exchange?referralId=subwayswap"
-        }'>
-    </crowdswap-swap-widget>
+      id="crowdswapWidget"
+      config='{
+        "fromTokenAddress":"0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+        "fromChainId":1,
+        "toTokenAddress":"0xba2ae424d960c26247dd6c32edc70b295c744c43",
+        "toChainId":56,
+        "theme":"dark",
+        "affiliateId":"https://app.crowdswap.org/exchange?referralId=subwayswap"
+    }'></crowdswap-swap-widget>
 </body>
 </html>
