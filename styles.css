@@ -1,0 +1,82 @@
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #191970; /* Midnight Blue Background */
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background span {
+    width: 31vmin;
+    height: 31vmin;
+    border-radius: 31vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.background span:nth-child(1) {
+    color: #E45A84;
+    top: 25%;
+    left: 93%;
+    animation-duration: 131s;
+    animation-delay: -78s;
+    transform-origin: 11vw -16vh;
+    box-shadow: -62vmin 0 7.830018226446034vmin currentColor;
+}
+/* (Additional background span styles...) */
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.swap-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1e90ff; /* Dodger Blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.swap-button:hover {
+    background-color: #1c86ee; /* Slightly darker blue */
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid #fff;
+    margin: 20px 0;
+}
+
+.widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px); /* Adjust height to center the widget */
+}
+
+crowdswap-swap-widget {
+    width: 80%; /* Adjust widget size */
+    max-width: 500px; /* Ensure it doesn't get too large */
+}
